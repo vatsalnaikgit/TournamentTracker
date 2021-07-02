@@ -35,9 +35,9 @@ namespace TrackerUI
             this.placeNumberLabel = new System.Windows.Forms.Label();
             this.placeNameValue = new System.Windows.Forms.TextBox();
             this.placeNameLabel = new System.Windows.Forms.Label();
-            this.priceAmountValue = new System.Windows.Forms.TextBox();
+            this.prizeAmountValue = new System.Windows.Forms.TextBox();
             this.priceAmountLabel = new System.Windows.Forms.Label();
-            this.pricePercentageValue = new System.Windows.Forms.TextBox();
+            this.prizePercentageValue = new System.Windows.Forms.TextBox();
             this.pricePercentageLabel = new System.Windows.Forms.Label();
             this.orLabel = new System.Windows.Forms.Label();
             this.createPrizeButton = new System.Windows.Forms.Button();
@@ -56,6 +56,7 @@ namespace TrackerUI
             // 
             // placeNumberValue
             // 
+            this.placeNumberValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.placeNumberValue.Location = new System.Drawing.Point(264, 81);
             this.placeNumberValue.Name = "placeNumberValue";
             this.placeNumberValue.Size = new System.Drawing.Size(171, 35);
@@ -74,6 +75,7 @@ namespace TrackerUI
             // 
             // placeNameValue
             // 
+            this.placeNameValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.placeNameValue.Location = new System.Drawing.Point(264, 133);
             this.placeNameValue.Name = "placeNameValue";
             this.placeNameValue.Size = new System.Drawing.Size(171, 35);
@@ -90,12 +92,14 @@ namespace TrackerUI
             this.placeNameLabel.TabIndex = 15;
             this.placeNameLabel.Text = "Place Name";
             // 
-            // priceAmountValue
+            // prizeAmountValue
             // 
-            this.priceAmountValue.Location = new System.Drawing.Point(264, 185);
-            this.priceAmountValue.Name = "priceAmountValue";
-            this.priceAmountValue.Size = new System.Drawing.Size(171, 35);
-            this.priceAmountValue.TabIndex = 18;
+            this.prizeAmountValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prizeAmountValue.Location = new System.Drawing.Point(264, 185);
+            this.prizeAmountValue.Name = "prizeAmountValue";
+            this.prizeAmountValue.Size = new System.Drawing.Size(171, 35);
+            this.prizeAmountValue.TabIndex = 18;
+            this.prizeAmountValue.Text = "0";
             // 
             // priceAmountLabel
             // 
@@ -108,12 +112,14 @@ namespace TrackerUI
             this.priceAmountLabel.TabIndex = 17;
             this.priceAmountLabel.Text = "Prize Amount";
             // 
-            // pricePercentageValue
+            // prizePercentageValue
             // 
-            this.pricePercentageValue.Location = new System.Drawing.Point(264, 349);
-            this.pricePercentageValue.Name = "pricePercentageValue";
-            this.pricePercentageValue.Size = new System.Drawing.Size(171, 35);
-            this.pricePercentageValue.TabIndex = 20;
+            this.prizePercentageValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.prizePercentageValue.Location = new System.Drawing.Point(264, 349);
+            this.prizePercentageValue.Name = "prizePercentageValue";
+            this.prizePercentageValue.Size = new System.Drawing.Size(171, 35);
+            this.prizePercentageValue.TabIndex = 20;
+            this.prizePercentageValue.Text = "0";
             // 
             // pricePercentageLabel
             // 
@@ -152,6 +158,7 @@ namespace TrackerUI
             this.createPrizeButton.TabIndex = 26;
             this.createPrizeButton.Text = "Create Prize";
             this.createPrizeButton.UseVisualStyleBackColor = false;
+            this.createPrizeButton.Click += new System.EventHandler(this.createPrizeButton_Click);
             // 
             // CreatePrizeForm
             // 
@@ -161,9 +168,9 @@ namespace TrackerUI
             this.ClientSize = new System.Drawing.Size(466, 491);
             this.Controls.Add(this.createPrizeButton);
             this.Controls.Add(this.orLabel);
-            this.Controls.Add(this.pricePercentageValue);
+            this.Controls.Add(this.prizePercentageValue);
             this.Controls.Add(this.pricePercentageLabel);
-            this.Controls.Add(this.priceAmountValue);
+            this.Controls.Add(this.prizeAmountValue);
             this.Controls.Add(this.priceAmountLabel);
             this.Controls.Add(this.placeNameValue);
             this.Controls.Add(this.placeNameLabel);
@@ -187,9 +194,9 @@ namespace TrackerUI
         private System.Windows.Forms.Label placeNumberLabel;
         private System.Windows.Forms.TextBox placeNameValue;
         private System.Windows.Forms.Label placeNameLabel;
-        private System.Windows.Forms.TextBox priceAmountValue;
+        private System.Windows.Forms.TextBox prizeAmountValue;
         private System.Windows.Forms.Label priceAmountLabel;
-        private System.Windows.Forms.TextBox pricePercentageValue;
+        private System.Windows.Forms.TextBox prizePercentageValue;
         private System.Windows.Forms.Label pricePercentageLabel;
         private System.Windows.Forms.Label orLabel;
         private System.Windows.Forms.Button createPrizeButton;
